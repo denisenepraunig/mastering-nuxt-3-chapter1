@@ -14,16 +14,16 @@ const route = useRoute();
 const chapterSlug = route.params.chapterSlug;
 // const chapterTitle = "Chapter 1 - Building our MVP";
 const chapterTitle = reverseFormatChapterTitle(chapterSlug);
-console.log(chapterTitle);
+// console.log(chapterTitle);
 
 function findChapterIndex(courseArray, title) {
   return courseArray.findIndex(chapter => chapter.title.toLowerCase() === title.toLowerCase());
 }
 
 const chapterIndex = findChapterIndex(course, chapterTitle);
-console.log(chapterIndex);
+// console.log(chapterIndex);
 const lessons = course[chapterIndex].lessons;
-console.log(lessons);
+// console.log(lessons);
 const chapterDescription = course[chapterIndex].description;
 
 const lessonSlug = route.params.lessonSlug;
