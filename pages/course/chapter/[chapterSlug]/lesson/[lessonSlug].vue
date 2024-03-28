@@ -71,9 +71,7 @@ useHead({
 // destroyed when navigating obviously
 // const progress = ref(false);
 
-const progress = useState('progress', () => {
-  return [];
-});
+const progress = useLocalStorage('progress', []);
 
 const isLessonCompleted = computed(() => {
   if (!progress.value[chapterIndex]) {
